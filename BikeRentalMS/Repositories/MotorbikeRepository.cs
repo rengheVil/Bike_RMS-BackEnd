@@ -1,12 +1,17 @@
 ﻿using BikeRentalMS.Database;
 using BikeRentalMS.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 
 namespace BikeRentalMS.Repositories
 {
     public class MotorbikeRepository
     {
-      
+
+   
             private readonly AppDbContext _context;
 
             public MotorbikeRepository(AppDbContext context)
@@ -27,7 +32,16 @@ namespace BikeRentalMS.Repositories
 
             public async Task<bool> UpdateMotorbikeAsync(Motorbike motorbike)
             {
-                _context.Motorbikes.Update(motorbike);
+                var existingMotorbike = await _context.Motorbikes.FindAsync(motorbike.Id);
+                if (existingMotorbike == null) return false;
+
+                existingMotorbike.RegNumber = motorbike.RegNumber;
+                existingMotorbike.Brand = motorbike.Brand;
+                existingMotorbike.Model = motorbike.Model;
+                existingMotorbike.Category = motorbike.Category;
+                existingMotorbike.ImageData = motorbike.ImageData;
+
+                _context.Motorbikes.Update(existingMotorbike);
                 return await _context.SaveChangesAsync() > 0;
             }
 
@@ -46,6 +60,8 @@ namespace BikeRentalMS.Repositories
             }
         }
     }
+
+   
 
 
 

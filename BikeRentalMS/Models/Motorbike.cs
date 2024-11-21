@@ -1,8 +1,11 @@
-﻿namespace BikeRentalMS.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BikeRentalMS.Models
 {
     public class Motorbike
     {
-        public int MotorbikeId { get; set; }
+        [Key]
+        public int Id { get; set; }
         public string RegNumber { get; set; }
         public string Brand { get; set; }
         public string Model { get; set; }

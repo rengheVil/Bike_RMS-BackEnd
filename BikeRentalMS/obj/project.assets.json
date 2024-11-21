@@ -5157,11 +5157,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "X:\\Milestone03\\M03\\BikeRentalManagementSystem\\Back_Enda\\BikeRentalMS\\BikeRentalMS\\BikeRentalMS.csproj",
+      "projectUniqueName": "C:\\Users\\UT01205\\Desktop\\BikeRentalMs\\Bike_RMS-BackEnd\\BikeRentalMS\\BikeRentalMS.csproj",
       "projectName": "BikeRentalMS",
-      "projectPath": "X:\\Milestone03\\M03\\BikeRentalManagementSystem\\Back_Enda\\BikeRentalMS\\BikeRentalMS\\BikeRentalMS.csproj",
+      "projectPath": "C:\\Users\\UT01205\\Desktop\\BikeRentalMs\\Bike_RMS-BackEnd\\BikeRentalMS\\BikeRentalMS.csproj",
       "packagesPath": "C:\\Users\\UT01205\\.nuget\\packages\\",
-      "outputPath": "X:\\Milestone03\\M03\\BikeRentalManagementSystem\\Back_Enda\\BikeRentalMS\\BikeRentalMS\\obj\\",
+      "outputPath": "C:\\Users\\UT01205\\Desktop\\BikeRentalMs\\Bike_RMS-BackEnd\\BikeRentalMS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\UT01205\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -14,14 +14,16 @@ namespace BikeRentalMS.Database
         public DbSet<LoginRequest> LoginRequests { get; set; }
         public DbSet<OrderHistory> OrderHistorys { get; set; }
         public DbSet<Rental> Rentals { get; set; }
-        public DbSet<RentalRequest> RentalRequestsd { get; set; }
+        public DbSet<RentalRequest> RentalRequests { get; set; }
         public DbSet<UpdateStatusRequest> UpdateStatusRequests { get; set; }
         public DbSet<User> Users { get; set; }
 
 
 
 
-    }
+
+
+        }
 
 
 }

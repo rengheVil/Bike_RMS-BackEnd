@@ -1,8 +1,11 @@
-﻿namespace BikeRentalMS.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BikeRentalMS.Models
 {
     public class UpdateStatusRequest
     {
-        public string RequestId { get; set; }
+        [Key]
+        public int Id {  get; set; }
         public string Status { get; set; }
         public DateTime? ApprovalDate { get; set; }
 
