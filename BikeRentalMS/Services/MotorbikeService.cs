@@ -1,6 +1,8 @@
-﻿using BikeRentalMS.Models;
+﻿using BikeRentalMS.Dtos.Request;
+using BikeRentalMS.Models;
 using BikeRentalMS.Repositories;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 
@@ -16,10 +18,30 @@ namespace BikeRentalMS.Services
                 _motorbikeRepository = motorbikeRepository;
             }
 
-            public async Task<bool> AddMotorbikeAsync(Motorbike motorbike)
+            public async Task<bool> AddMotorbikeAsync(MotorbikeRequest motorbikeRequest)
             {
-                return await _motorbikeRepository.AddMotorbikeAsync(motorbike);
+            var motorbike = new Motorbike
+            {
+                RegNumber = motorbikeRequest.RegNumber,
+                Brand = motorbikeRequest.Brand,
+                Model = motorbikeRequest.Model,
+                Category = motorbikeRequest.Category,
+                         
+               };
+
+            if (motorbikeRequest.ImageData != null)
+            {
+                using (var memoryStream = new MemoryStream()) 
+                {
+                    await motorbikeRequest.ImageData.CopyToAsync(memoryStream);
+                    motorbike.ImageData = memoryStream.ToArray();
+
+
+                }
             }
+
+             return await _motorbikeRepository.AddMotorbikeAsync(motorbike);
+        }
 
             public async Task<Motorbike> GetMotorbikeByIdAsync(int motorbikeId)
             {

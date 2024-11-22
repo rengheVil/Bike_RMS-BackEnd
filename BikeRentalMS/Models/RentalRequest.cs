@@ -14,6 +14,7 @@ namespace BikeRentalMS.Models
         public DateTime RequestDate { get; set; }
         public string Status { get; set; }
         public DateTime ApprovalDate { get; set; }
+       
         //public object Id { get; internal set; }
     }
 }

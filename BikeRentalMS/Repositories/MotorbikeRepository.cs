@@ -21,7 +21,7 @@ namespace BikeRentalMS.Repositories
 
             public async Task<bool> AddMotorbikeAsync(Motorbike motorbike)
             {
-                _context.Motorbikes.Add(motorbike);
+                await _context.Motorbikes.AddAsync(motorbike);
                 return await _context.SaveChangesAsync() > 0;
             }
 

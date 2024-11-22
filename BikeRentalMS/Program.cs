@@ -63,6 +63,7 @@ namespace BikeRentalMS
 
             app.UseAuthorization();
 
+            app.UseCors("AllowAllOrigins");
 
             app.MapControllers();
 

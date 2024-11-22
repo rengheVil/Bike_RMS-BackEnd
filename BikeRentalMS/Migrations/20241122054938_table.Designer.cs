@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BikeRentalMS.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241121071410_Tablesupdated2")]
-    partial class Tablesupdated2
+    [Migration("20241122054938_table")]
+    partial class table
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -66,9 +66,9 @@ namespace BikeRentalMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageData")
+                    b.Property<byte[]>("ImageData")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Model")
                         .IsRequired()
@@ -104,6 +104,10 @@ namespace BikeRentalMS.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("MotorbikeId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("OrderHistorys");
                 });
@@ -160,6 +164,10 @@ namespace BikeRentalMS.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("MotorbikeId");
+
+                    b.HasIndex("UserId");
+
                     b.ToTable("RentalRequests");
                 });
 
@@ -173,10 +181,6 @@ namespace BikeRentalMS.Migrations
 
                     b.Property<DateTime?>("ApprovalDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("RequestId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
                         .IsRequired()
@@ -216,7 +220,45 @@ namespace BikeRentalMS.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("BikeRentalMS.Models.OrderHistory", b =>
+                {
+                    b.HasOne("BikeRentalMS.Models.Motorbike", "Motorbike")
+                        .WithMany()
+                        .HasForeignKey("MotorbikeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BikeRentalMS.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Motorbike");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("BikeRentalMS.Models.Rental", b =>
+                {
+                    b.HasOne("BikeRentalMS.Models.Motorbike", "Motorbike")
+                        .WithMany()
+                        .HasForeignKey("MotorbikeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BikeRentalMS.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Motorbike");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BikeRentalMS.Models.RentalRequest", b =>
                 {
                     b.HasOne("BikeRentalMS.Models.Motorbike", "Motorbike")
                         .WithMany()

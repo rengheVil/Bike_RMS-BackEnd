@@ -11,6 +11,7 @@ namespace BikeRentalMS.Models
         public string Password { get; set; }
         public string NIC { get; set; }
         public string Role { get; set; }
+        public ICollection<Rental>? Rentals { get; set; }
         //public object Id { get; internal set; }
     }
 }

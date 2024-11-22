@@ -38,7 +38,7 @@ namespace BikeRentalMS.Repositories
 
             public async Task<List<Rental>> GetAllRentalsAsync()
             {
-                return await _context.Rentals.ToListAsync();
+                return await _context.Rentals.Include(rental => rental.User).ToListAsync();
             }
 
         public async Task<List<OrderHistory>> GetOverdueRentalsAsync()

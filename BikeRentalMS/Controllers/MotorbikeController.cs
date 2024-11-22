@@ -1,4 +1,5 @@
-﻿using BikeRentalMS.Models;
+﻿using BikeRentalMS.Dtos.Request;
+using BikeRentalMS.Models;
 using BikeRentalMS.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,9 +19,9 @@ namespace BikeRentalMS.Controllers
             }
 
             [HttpPost]
-            public async Task<IActionResult> AddMotorbike([FromBody] Motorbike motorbike)
+            public async Task<IActionResult> AddMotorbike(MotorbikeRequest motorbikeRequest)
             {
-                if (await _motorbikeService.AddMotorbikeAsync(motorbike))
+                if (await _motorbikeService.AddMotorbikeAsync(motorbikeRequest))
                 {
                     return Ok("Motorbike added successfully.");
                 }
