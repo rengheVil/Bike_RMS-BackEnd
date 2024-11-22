@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BikeRentalMS.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241121071829_Tablesupdated3")]
-    partial class Tablesupdated3
+    [Migration("20241122112352_imgnull")]
+    partial class imgnull
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -66,9 +66,8 @@ namespace BikeRentalMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageData")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<byte[]>("ImageData")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Model")
                         .IsRequired()
@@ -248,7 +247,7 @@ namespace BikeRentalMS.Migrations
                         .IsRequired();
 
                     b.HasOne("BikeRentalMS.Models.User", "User")
-                        .WithMany()
+                        .WithMany("Rentals")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -275,6 +274,11 @@ namespace BikeRentalMS.Migrations
                     b.Navigation("Motorbike");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BikeRentalMS.Models.User", b =>
+                {
+                    b.Navigation("Rentals");
                 });
 #pragma warning restore 612, 618
         }

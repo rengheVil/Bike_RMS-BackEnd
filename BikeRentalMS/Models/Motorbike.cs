@@ -10,6 +10,6 @@ namespace BikeRentalMS.Models
         public string Brand { get; set; }
         public string Model { get; set; }
         public string Category { get; set; }
-        public string ImageData { get; set; }
+        public byte[]? ImageData { get; set; }
     }
 }

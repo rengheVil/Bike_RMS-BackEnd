@@ -63,9 +63,8 @@ namespace BikeRentalMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageData")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<byte[]>("ImageData")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Model")
                         .IsRequired()
@@ -245,7 +244,7 @@ namespace BikeRentalMS.Migrations
                         .IsRequired();
 
                     b.HasOne("BikeRentalMS.Models.User", "User")
-                        .WithMany()
+                        .WithMany("Rentals")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -272,6 +271,11 @@ namespace BikeRentalMS.Migrations
                     b.Navigation("Motorbike");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BikeRentalMS.Models.User", b =>
+                {
+                    b.Navigation("Rentals");
                 });
 #pragma warning restore 612, 618
         }
