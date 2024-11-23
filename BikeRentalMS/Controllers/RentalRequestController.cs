@@ -61,7 +61,7 @@ namespace BikeRentalMS.Controllers
 
                     if (isUpdated)
                     {
-                        return NoContent(); // 204 No Content for successful updates
+                        return NoContent(); 
                     }
 
                     return NotFound("Rental request not found or status update failed.");
