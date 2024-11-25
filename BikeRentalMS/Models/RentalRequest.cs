@@ -12,7 +12,7 @@ namespace BikeRentalMS.Models
         public User User { get; set; }
         public int UserId { get; set; }
         public DateTime RequestDate { get; set; }
-        public string Status { get; set; }
+        public string Status { get; set; }                // Pending, Approved, Rejected
         public DateTime ApprovalDate { get; set; }
        
         //public object Id { get; internal set; }

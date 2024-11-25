@@ -1,4 +1,5 @@
 ﻿using BikeRentalMS.Database;
+using BikeRentalMS.Dtos.Request;
 using BikeRentalMS.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,11 +16,11 @@ namespace BikeRentalMS.Repositories
             }
 
             // Add a new rental request
-            public async Task<bool> AddRentalRequestAsync(RentalRequest request)
+            public async Task<RentalRequest> AddRentalRequestAsync(RentalRequest request)
             {
-                await _context.RentalRequests.AddAsync(request);
-                int result = await _context.SaveChangesAsync();
-                return result > 0;
+               var data = await _context.RentalRequests.AddAsync(request);
+              await _context.SaveChangesAsync();
+                return data.Entity;
             }
 
             // Update the status of a rental request
@@ -38,7 +39,7 @@ namespace BikeRentalMS.Repositories
             // Retrieve all rental requests
             public async Task<List<RentalRequest>> GetAllRentalRequestsAsync()
             {
-                return await _context.RentalRequests.ToListAsync();
+                return await _context.RentalRequests.Include(b => b.Motorbike).ToListAsync();
             }
 
             // Approve a rental request
