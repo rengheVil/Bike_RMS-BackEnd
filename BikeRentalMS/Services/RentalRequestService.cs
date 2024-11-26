@@ -50,9 +50,15 @@ namespace BikeRentalMS.Services
             return await _rentalRepository.AddRentalAsync(rental);
         }
 
-        public async Task<bool> UpdateRentalRequestStatusAsync(int requestId, string status, DateTime? approvalDate = null)
+        public async Task<bool> UpdateRentalRequestStatusAsync(int requestId)
         {
-            return await _requestRepository.UpdateRentalRequestStatusAsync(requestId, status, approvalDate);
+            var getRequest = await _requestRepository.GetRentalRequestByIdAsync(requestId);
+            if(getRequest == null)
+            {
+                throw new Exception("Request not found");
+            }
+            getRequest.Status = "approved";
+            return await _requestRepository.UpdateRentalRequestStatusAsync(getRequest);
         }
 
         public async Task<List<RentalRequest>> GetAllRentalRequestsAsync()

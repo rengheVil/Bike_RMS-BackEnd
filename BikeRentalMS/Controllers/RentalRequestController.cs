@@ -31,8 +31,8 @@ namespace BikeRentalMS.Controllers
               
             }
 
-            [HttpPut("{requestId}/status")]
-            public async Task<IActionResult> UpdateRentalRequestStatus(int requestId, [FromBody] UpdateStatusRequest statusRequest)
+            [HttpGet("{requestId}/update")]
+            public async Task<IActionResult> UpdateRentalRequestStatus(int requestId)
             {
                 if (!ModelState.IsValid)
                 {
@@ -41,7 +41,7 @@ namespace BikeRentalMS.Controllers
 
                 try
                 {
-                    bool isUpdated = await _requestService.UpdateRentalRequestStatusAsync(requestId, statusRequest.Status, statusRequest.ApprovalDate);
+                    bool isUpdated = await _requestService.UpdateRentalRequestStatusAsync(requestId);
 
                     if (isUpdated)
                     {

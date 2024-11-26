@@ -24,14 +24,9 @@ namespace BikeRentalMS.Repositories
             }
 
             // Update the status of a rental request
-            public async Task<bool> UpdateRentalRequestStatusAsync(int rentalRequestId, string status, DateTime? approvalDate = null)
+            public async Task<bool> UpdateRentalRequestStatusAsync(RentalRequest rentalRequest)
             {
-                var request = await _context.RentalRequests.FindAsync(rentalRequestId);
-                if (request == null) return false;
-
-                request.Status = status;
-                request.ApprovalDate = (DateTime)approvalDate;
-
+                _context.RentalRequests.Update(rentalRequest);
                 int result = await _context.SaveChangesAsync();
                 return result > 0;
             }
@@ -60,6 +55,7 @@ namespace BikeRentalMS.Repositories
             {
                 return await _context.RentalRequests.FirstOrDefaultAsync(r => r.Id == id);
             }
+
         }
     }
 
