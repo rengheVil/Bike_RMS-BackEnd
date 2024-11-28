@@ -38,7 +38,15 @@ namespace BikeRentalMS.Services
             var rentalRequest = await _requestRepository.GetRentalRequestByIdAsync(requestId);
             if (rentalRequest == null || rentalRequest.Status != "pending") return false;
 
-            await _requestRepository.ApproveRentalRequestAsync(requestId, DateTime.UtcNow);
+           var result = await _requestRepository.ApproveRentalRequestAsync(requestId, DateTime.UtcNow);
+            //if (result)
+            //{
+            //    var rental = new Rental
+            //    {
+
+            //    };
+            //    await _rentalRepository.AddRentalAsync()
+            //}
 
             var rental = new Rental
             {
@@ -46,9 +54,16 @@ namespace BikeRentalMS.Services
                 UserId = rentalRequest.UserId,
                 RentDate = DateTime.UtcNow
             };
-
-            return await _rentalRepository.AddRentalAsync(rental);
+            var data = await _rentalRepository.AddRentalAsync(rental);
+            return data;
         }
+
+        ///-----------------------------------------rental--
+        public async Task<List<RentalRequest>> GetUserApprovalsAsync(int userId)
+        {
+            return await _requestRepository.GetApprovedRequestsByUserIdAsync(userId);
+        }
+
 
         public async Task<bool> UpdateRentalRequestStatusAsync(int requestId)
         {

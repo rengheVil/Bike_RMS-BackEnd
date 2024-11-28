@@ -41,7 +41,7 @@ namespace BikeRentalMS.Controllers
 
                 try
                 {
-                    bool isUpdated = await _requestService.UpdateRentalRequestStatusAsync(requestId);
+                    bool isUpdated = await _requestService.ApproveRentalRequestAsync(requestId);
 
                     if (isUpdated)
                     {
@@ -57,7 +57,24 @@ namespace BikeRentalMS.Controllers
                 }
             }
 
-            [HttpGet("{requestId}")]
+        ///      ----------approve user============================
+
+        [HttpGet("Approvals/{userId}")]
+        public async Task<IActionResult> GetUserApprovals(int userId)
+        {
+            var approvals = await _requestService.GetUserApprovalsAsync(userId);
+
+            if (approvals == null || !approvals.Any())
+            {
+                return NotFound(new { Message = "No approvals found for the user." });
+            }
+
+            return Ok(approvals);
+        }
+
+
+
+        [HttpGet("{requestId}")]
             public async Task<IActionResult> GetRentalRequestById(int requestId)
             {
                 try

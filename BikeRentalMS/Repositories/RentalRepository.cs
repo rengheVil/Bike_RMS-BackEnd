@@ -21,6 +21,8 @@ namespace BikeRentalMS.Repositories
                 return result > 0;
             }
 
+
+
             public async Task<Rental> GetRentalByIdAsync(int rentalId)
             {
                 return await _context.Rentals.FirstOrDefaultAsync(r => r.Id == rentalId);

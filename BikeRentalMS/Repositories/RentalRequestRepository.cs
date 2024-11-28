@@ -50,8 +50,17 @@ namespace BikeRentalMS.Repositories
                 return result > 0;
             }
 
-            // Get rental request by ID
-            public async Task<RentalRequest> GetRentalRequestByIdAsync(int id)
+
+            public async Task<List<RentalRequest>> GetApprovedRequestsByUserIdAsync(int userId)
+            {
+                return await _context.RentalRequests
+                    .Where(r => r.UserId == userId && r.Status.ToLower() == "approved")
+                    .ToListAsync();
+            }
+
+
+        // Get rental request by ID
+        public async Task<RentalRequest> GetRentalRequestByIdAsync(int id)
             {
                 return await _context.RentalRequests.FirstOrDefaultAsync(r => r.Id == id);
             }
