@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/78LXK7/rys=",
+  "dgSpecHash": "pIBbRbhS+Ug=",
   "success": true,
-  "projectFilePath": "C:\\Users\\UT01205\\Desktop\\BikeRentalMs\\Bike_RMS-BackEnd\\BikeRentalMS\\BikeRentalMS.csproj",
+  "projectFilePath": "C:\\Users\\UT01205\\Desktop\\BRMSd\\Bike_RMS-BackEnd\\BikeRentalMS\\BikeRentalMS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\UT01205\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\UT01205\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

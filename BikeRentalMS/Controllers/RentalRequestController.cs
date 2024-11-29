@@ -1,4 +1,5 @@
-﻿using BikeRentalMS.Models;
+﻿using BikeRentalMS.Dtos.Request;
+using BikeRentalMS.Models;
 using BikeRentalMS.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -22,33 +23,16 @@ namespace BikeRentalMS.Controllers
             }
 
             [HttpPost]
-            public async Task<IActionResult> AddRentalRequest([FromBody] RentalRequest request)
+            public async Task<IActionResult> AddRentalRequest([FromBody] RentalRequestDTO requestDto)
             {
-                if (request == null)
-                {
-                    return BadRequest("Invalid rental request.");
-                }
-
-                try
-                {
-                    bool isAdded = await _requestService.AddRentalRequestAsync(request);
-
-                    if (isAdded)
-                    {
-                        return CreatedAtAction(nameof(GetRentalRequestById), new { id = request.Id }, request);
-                    }
-
-                    return StatusCode(500, "Error while adding rental request.");
-                }
-                catch (Exception ex)
-                {
-                    // Log the exception
-                    return StatusCode(500, $"Internal server error: {ex.Message}");
-                }
+                   var data = await _requestService.AddRentalRequestAsync(requestDto);
+                    // return CreatedAtAction(nameof(GetRentalRequestById), new { id = requestDto.Id }, requestDto);
+                    return Ok(data);
+              
             }
 
-            [HttpPut("{requestId}/status")]
-            public async Task<IActionResult> UpdateRentalRequestStatus(int requestId, [FromBody] UpdateStatusRequest statusRequest)
+            [HttpGet("{requestId}/update")]
+            public async Task<IActionResult> UpdateRentalRequestStatus(int requestId)
             {
                 if (!ModelState.IsValid)
                 {
@@ -57,11 +41,11 @@ namespace BikeRentalMS.Controllers
 
                 try
                 {
-                    bool isUpdated = await _requestService.UpdateRentalRequestStatusAsync(requestId, statusRequest.Status, statusRequest.ApprovalDate);
+                    bool isUpdated = await _requestService.UpdateRentalRequestStatusAsync(requestId);
 
                     if (isUpdated)
                     {
-                        return NoContent(); // 204 No Content for successful updates
+                        return NoContent(); 
                     }
 
                     return NotFound("Rental request not found or status update failed.");

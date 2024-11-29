@@ -23,9 +23,9 @@ namespace BikeRentalMS.Controllers
             {
                 if (await _motorbikeService.AddMotorbikeAsync(motorbikeRequest))
                 {
-                    return Ok("Motorbike added successfully.");
+                    return Ok(new { message = "Motorbike added successfully." });
                 }
-                return BadRequest("Failed to add motorbike.");
+                return BadRequest(new { message = "Failed to add motorbike." });
             }
 
             [HttpGet("{motorbikeId}")]
@@ -34,7 +34,7 @@ namespace BikeRentalMS.Controllers
                 var motorbike =await _motorbikeService.GetMotorbikeByIdAsync(motorbikeId);
                 if (motorbike == null)
                 {
-                    return NotFound("Motorbike not found.");
+                    return NotFound(new { message = "Motorbike not found." });
                 }
                 return Ok(motorbike);
             }
@@ -44,9 +44,9 @@ namespace BikeRentalMS.Controllers
             {
                 if (await _motorbikeService.UpdateMotorbikeAsync(motorbike))
                 {
-                    return Ok("Motorbike updated successfully.");
+                    return Ok(new { message = "Motorbike updated successfully." });
                 }
-                return BadRequest("Failed to update motorbike.");
+                return BadRequest(new { message = "Failed to update motorbike." });
             }
 
             [HttpDelete("{motorbikeId}")]
@@ -54,9 +54,9 @@ namespace BikeRentalMS.Controllers
             {
                 if (await _motorbikeService.DeleteMotorbikeAsync(motorbikeId))
                 {
-                    return Ok("Motorbike deleted successfully.");
+                    return Ok(new { message = "Motorbike deleted successfully." });
                 }
-                return NotFound("Motorbike not found.");
+                return NotFound(new { message = "Motorbike not found." });
             }
 
             [HttpGet]
