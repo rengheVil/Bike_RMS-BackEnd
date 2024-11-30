@@ -54,7 +54,7 @@ namespace BikeRentalMS.Repositories
             public async Task<List<RentalRequest>> GetApprovedRequestsByUserIdAsync(int userId)
             {
                 return await _context.RentalRequests
-                    .Where(r => r.UserId == userId && r.Status.ToLower() == "approved")
+                    .Where(r => r.UserId == userId && r.Status.ToLower() == "approved").Include(r => r.Motorbike)
                     .ToListAsync();
             }
 
@@ -65,7 +65,11 @@ namespace BikeRentalMS.Repositories
                 return await _context.RentalRequests.FirstOrDefaultAsync(r => r.Id == id);
             }
 
-        }
+       
+
+
+
+    }
     }
 
 

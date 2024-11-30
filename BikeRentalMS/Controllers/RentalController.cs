@@ -63,6 +63,29 @@ namespace BikeRentalMS.Controllers
         {
             return Ok(await _rentalService.GetOverdueRentalsAsync());
         }
+
+        ////////////
+        /// 11/30 - 10.24
+
+        [HttpGet("active")]
+        public async Task<IActionResult> GetAllActiveRentals()
+        {
+            var rentals = await _rentalService.GetAllActiveRentalsAsync();
+            return Ok(rentals);
+        }
+
+        [HttpPost("return/{rentalId}")]
+        public async Task<IActionResult> ReturnRental(int rentalId)
+        {
+            var result = await _rentalService.ReturnRentalAsync(rentalId);
+            if (!result)
+                return BadRequest("Failed to return rental.");
+
+            return Ok("Rental returned successfully.");
+        }
+
+
+
     }
 }
 

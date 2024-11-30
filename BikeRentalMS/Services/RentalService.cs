@@ -45,6 +45,40 @@ namespace BikeRentalMS.Services
             {
                 return await _rentalRepository.GetOverdueRentalsAsync();
             }
+
+        ////////////
+        /// 11/30- 10.23
+
+        public async Task<IEnumerable<Rental>> GetAllActiveRentalsAsync()
+        {
+            return await _rentalRepository.GetAllActiveRentalsAsync();
         }
+
+        public async Task<bool> ReturnRentalAsync(int rentalId)
+        {
+
+            var rental = await _rentalRepository.GetRentalByIdAsync(rentalId);
+            if (rental == null) return false;
+
+
+            var orderHistory = new OrderHistory
+            {
+                MotorbikeId = rental.MotorbikeId,
+                UserId = rental.UserId,
+                RentDate = rental.RentDate,
+                ReturnDate = DateTime.Now
+            };
+
+            // Add to OrderHistory and remove rental
+            //bool addedToHistory = await _rentalRepository.AddOrderHistoryAsync(orderHistory);
+            //if (!addedToHistory) return false;
+
+            return await _rentalRepository.DeleteRentalAsync(rentalId);
+        }
+
+
+
+
+    }
     }
 

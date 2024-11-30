@@ -21,6 +21,8 @@ namespace BikeRentalMS
             builder.Services.AddSwaggerGen();
 
 
+          
+
             // Enable CORS
             builder.Services.AddCors(options =>
             {

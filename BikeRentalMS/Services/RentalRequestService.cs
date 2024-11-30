@@ -61,7 +61,9 @@ namespace BikeRentalMS.Services
         ///-----------------------------------------rental--
         public async Task<List<RentalRequest>> GetUserApprovalsAsync(int userId)
         {
-            return await _requestRepository.GetApprovedRequestsByUserIdAsync(userId);
+            var data = await _requestRepository.GetApprovedRequestsByUserIdAsync(userId);
+           // var Motorbike = data[0].Motorbike;
+            return data;
         }
 
 
