@@ -15,7 +15,9 @@ namespace BikeRentalMS.Models
         public int UserId { get; set; }
         public DateTime RentDate { get; set; }
 
-        public DateTime? ReturnDate { get; set; }  
+        public DateTime? ReturnDate { get; set; }
+
+        public string? Status { get; set; }   
         // public object ReturnDate { get; internal set; }
     }
 }

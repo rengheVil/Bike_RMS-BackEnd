@@ -843,3 +843,14 @@ C:\Users\UT01205\Desktop\BRMSe\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\re
 C:\Users\UT01205\Desktop\BRMSe\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\BikeRentalMS.pdb
 C:\Users\UT01205\Desktop\BRMSe\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\BikeRentalMS.genruntimeconfig.cache
 C:\Users\UT01205\Desktop\BRMSe\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\ref\BikeRentalMS.dll
+C:\Users\UT01205\Desktop\30\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\BikeRentalMS.csproj.AssemblyReference.cache
+C:\Users\UT01205\Desktop\30\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\BikeRentalMS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UT01205\Desktop\30\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\BikeRentalMS.AssemblyInfoInputs.cache
+C:\Users\UT01205\Desktop\30\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\BikeRentalMS.AssemblyInfo.cs
+C:\Users\UT01205\Desktop\30\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\BikeRentalMS.csproj.CoreCompileInputs.cache
+C:\Users\UT01205\Desktop\30\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\BikeRentalMS.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\UT01205\Desktop\30\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\BikeRentalMS.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\UT01205\Desktop\30\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\BikeRentalMS.sourcelink.json
+C:\Users\UT01205\Desktop\30\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\BikeRentalMS.dll
+C:\Users\UT01205\Desktop\30\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\refint\BikeRentalMS.dll
+C:\Users\UT01205\Desktop\30\Bike_RMS-BackEnd\BikeRentalMS\obj\Debug\net8.0\BikeRentalMS.pdb

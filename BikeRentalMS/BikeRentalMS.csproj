@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\Response\" />
+    <Folder Include="Dtos\Response\NewFolder\" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using BikeRentalMS.Models;
+﻿using BikeRentalMS.Dtos.Response;
+using BikeRentalMS.Models;
 using BikeRentalMS.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -44,11 +45,11 @@ namespace BikeRentalMS.Controllers
             return Ok(rental);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAllRentals()
-        {
-            return Ok(await _rentalService.GetAllRentalsAsync());
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> GetAllRentals()
+        //{
+        //    return Ok(await _rentalService.GetAllRentalsAsync());
+        //}
 
         [HttpDelete("{rentalId}")]
         public async Task<IActionResult> DeleteRental(int rentalId)
@@ -74,14 +75,39 @@ namespace BikeRentalMS.Controllers
             return Ok(rentals);
         }
 
-        [HttpPost("return/{rentalId}")]
+        [HttpGet("return/{rentalId}")]
         public async Task<IActionResult> ReturnRental(int rentalId)
         {
             var result = await _rentalService.ReturnRentalAsync(rentalId);
-            if (!result)
+            if (result==false)
+            {
                 return BadRequest("Failed to return rental.");
+            }
+            else
+            {
+                var ressultsRespoonse = new RentalResponse()
+                {
+                    message = "Rental returned successfully"
+                };
+                return Ok(ressultsRespoonse);
 
-            return Ok("Rental returned successfully.");
+
+            }
+                
+           
+        }
+
+        /////////
+        ///
+        [HttpGet]
+        public async Task<IActionResult> GetAllRentals()
+        {
+            var rentals = await _rentalService.GetAllRentalsAsync();
+            if (rentals == null || !rentals.Any())
+            {
+                return NotFound(new { Message = "No rental records found." });
+            }
+            return Ok(rentals);
         }
 
 

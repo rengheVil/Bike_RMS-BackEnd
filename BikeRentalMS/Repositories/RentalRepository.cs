@@ -1,4 +1,5 @@
 ﻿using BikeRentalMS.Database;
+using BikeRentalMS.Dtos.Request;
 using BikeRentalMS.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -38,24 +39,24 @@ namespace BikeRentalMS.Repositories
             //    return result > 0;
             //}
 
-            public async Task<List<Rental>> GetAllRentalsAsync()
-            {
-                return await _context.Rentals.Include(rental => rental.User).Include(r => r.Motorbike).ToListAsync();
-            }
+            //public async Task<List<Rental>> GetAllRentalsAsync()
+            //{
+            //    return await _context.Rentals.Include(rental => rental.User).Include(r => r.Motorbike).ToListAsync();
+            //}
 
-        public async Task<List<OrderHistory>> GetOverdueRentalsAsync()
-        {
-            return await _context.OrderHistorys
-                .Where(r => r.ReturnDate == null && EF.Functions.DateDiffMinute(r.RentDate, DateTime.Now) > 1)
-                .ToListAsync();
-        }
+        //public async Task<List<Rental>> GetOverdueRentalsAsync()
+        //{
+        //    var now = DateTime.Now;
+        //    var data = await _context
+        //    return data;
+        //}
 
         ////////////////
         /// 11/30 - 10.15
-        public async Task<IEnumerable<Rental>> GetAllActiveRentalsAsync()
-        {
-            return await _context.Rentals.Include(r => r.Motorbike).Include(r => r.User).ToListAsync();
-        }
+        //public async Task<IEnumerable<Rental>> GetAllActiveRentalsAsync()
+        //{
+        //    return await _context.Rentals.Include(r => r.Motorbike).Include(r => r.User).ToListAsync();
+        //}
 
         public async Task<Rental?> GetRentalByIdAsync(int rentalId)
         {
@@ -71,6 +72,19 @@ namespace BikeRentalMS.Repositories
             _context.Rentals.Remove(rental);
             return await _context.SaveChangesAsync() > 0;
         }
+
+
+        ////////////
+        ///
+
+        public async Task<IEnumerable<Rental>> GetAllRentalsAsync()
+        {
+            return await _context.Rentals
+                .Include(r => r.Motorbike)
+                .ToListAsync();
+        }
+
+
 
         //public async Task<OrderHistorie> AddOrderHistoryAsync(OrderHistory orderHistory)
         //{

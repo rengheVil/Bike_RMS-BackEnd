@@ -1,5 +1,7 @@
-﻿using BikeRentalMS.Models;
+﻿using BikeRentalMS.Dtos.Request;
+using BikeRentalMS.Models;
 using BikeRentalMS.Repositories;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -10,10 +12,12 @@ namespace BikeRentalMS.Services
     {
 
             private readonly RentalRepository _rentalRepository;
+        private readonly OrderHistoryRepository _orderHistoryRepository;
 
-            public RentalService(RentalRepository rentalRepository)
+            public RentalService(RentalRepository rentalRepository,OrderHistoryRepository orderHistoryRepository)
             {
                 _rentalRepository = rentalRepository;
+             _orderHistoryRepository = orderHistoryRepository;
             }
 
             // Add a rental
@@ -35,23 +39,42 @@ namespace BikeRentalMS.Services
             }
 
             // Get all rentals
-            public async Task<List<Rental>> GetAllRentalsAsync()
-            {
-                return await _rentalRepository.GetAllRentalsAsync();
-            }
+            //public async Task<List<Rental>> GetAllRentalsAsync()
+            //{
+            //    return await _rentalRepository.GetAllRentalsAsync();
+            //}
 
             // Get overdue rentals
-            public async Task<List<OrderHistory>> GetOverdueRentalsAsync()
+            public async Task<List<Rental>> GetOverdueRentalsAsync()
             {
-                return await _rentalRepository.GetOverdueRentalsAsync();
+                var data = await _rentalRepository.GetAllRentalsAsync();
+            var now = DateTime.Now;
+            var responseList = new List<Rental>();  
+            foreach (var rental in data) { 
+                if(now.Subtract(rental.RentDate).Days > 1 && rental.ReturnDate == null)
+                {
+                    responseList.Add(rental);
+                }
             }
+            return responseList;
+        }
 
         ////////////
         /// 11/30- 10.23
 
         public async Task<IEnumerable<Rental>> GetAllActiveRentalsAsync()
         {
-            return await _rentalRepository.GetAllActiveRentalsAsync();
+            var data = await _rentalRepository.GetAllRentalsAsync();
+            var now = DateTime.Now;
+            var responseList = new List<Rental>();
+            foreach (var rental in data)
+            {
+                if (now.Subtract(rental.RentDate).Days <= 1 && rental.ReturnDate == null)
+                {
+                    responseList.Add(rental);
+                }
+            }
+            return responseList;
         }
 
         public async Task<bool> ReturnRentalAsync(int rentalId)
@@ -70,11 +93,39 @@ namespace BikeRentalMS.Services
             };
 
             // Add to OrderHistory and remove rental
-            //bool addedToHistory = await _rentalRepository.AddOrderHistoryAsync(orderHistory);
+            bool addedToHistory = await _orderHistoryRepository.AddOrderHistoryAsync(orderHistory);
             //if (!addedToHistory) return false;
 
             return await _rentalRepository.DeleteRentalAsync(rentalId);
         }
+
+
+        //////////
+        ///
+
+    
+
+        public async Task<IEnumerable<RentalDto>> GetAllRentalsAsync()
+        {
+            var rentals = await _rentalRepository.GetAllRentalsAsync();
+
+            // Map entity to DTO
+            return rentals.Select(r => new RentalDto
+            {    id=r.Id,
+                UserId = r.UserId,
+                Motorbike = new MotorbikeDto
+                {
+
+                    RegNumber = r.Motorbike.RegNumber,
+                    Brand = r.Motorbike.Brand,
+                    Model = r.Motorbike.Model
+                },
+                RentDate = r.RentDate,
+                Status = r.ReturnDate >= DateTime.UtcNow 
+
+            });
+        }
+
 
 
 
