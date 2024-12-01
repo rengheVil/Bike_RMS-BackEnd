@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BikeRentalMS.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241122054938_table")]
-    partial class table
+    [Migration("20241201043852_add_basic_tables")]
+    partial class add_basic_tables
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -67,7 +67,6 @@ namespace BikeRentalMS.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<byte[]>("ImageData")
-                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Model")
@@ -125,6 +124,12 @@ namespace BikeRentalMS.Migrations
 
                     b.Property<DateTime>("RentDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ReturnDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -248,7 +253,7 @@ namespace BikeRentalMS.Migrations
                         .IsRequired();
 
                     b.HasOne("BikeRentalMS.Models.User", "User")
-                        .WithMany()
+                        .WithMany("Rentals")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -275,6 +280,11 @@ namespace BikeRentalMS.Migrations
                     b.Navigation("Motorbike");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BikeRentalMS.Models.User", b =>
+                {
+                    b.Navigation("Rentals");
                 });
 #pragma warning restore 612, 618
         }

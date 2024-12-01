@@ -56,9 +56,23 @@ namespace BikeRentalMS.Repositories
 
             public async Task<List<Motorbike>> GetAllMotorbikesAsync()
             {
-                return await _context.Motorbikes.ToListAsync();
+                var bikes = await _context.Motorbikes.Where(a=>a.IsAvailable==true).ToListAsync();
+
+               return bikes;
             }
+
+        public async Task UpdatReturnStatus(int id)
+        { 
+            var data =await GetMotorbikeByIdAsync(id);
+            if (data == null) return;
+
+            data.IsAvailable=false;
+            _context.SaveChangesAsync();
         }
+
+
+
+    }
     }
 
    

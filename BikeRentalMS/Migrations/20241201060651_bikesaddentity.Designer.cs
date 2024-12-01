@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BikeRentalMS.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241130050059_rentaltableupdate")]
-    partial class rentaltableupdate
+    [Migration("20241201060651_bikesaddentity")]
+    partial class bikesaddentity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -68,6 +68,9 @@ namespace BikeRentalMS.Migrations
 
                     b.Property<byte[]>("ImageData")
                         .HasColumnType("varbinary(max)");
+
+                    b.Property<bool?>("IsAvailable")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Model")
                         .IsRequired()
@@ -127,6 +130,9 @@ namespace BikeRentalMS.Migrations
 
                     b.Property<DateTime?>("ReturnDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");

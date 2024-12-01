@@ -62,14 +62,21 @@ namespace BikeRentalMS.Controllers
         [HttpGet("Approvals/{userId}")]
         public async Task<IActionResult> GetUserApprovals(int userId)
         {
-            var approvals = await _requestService.GetUserApprovalsAsync(userId);
-
-            if (approvals == null || !approvals.Any())
+            try
             {
-                return NotFound(new { Message = "No approvals found for the user." });
+                var approvals = await _requestService.GetUserApprovalsAsync(userId);
+                if (approvals == null)
+                {
+                    throw new Exception("no data for this person");
+                }
+                return Ok(approvals);
             }
-
-            return Ok(approvals);
+            catch (Exception ex)
+            {
+                {
+                    return BadRequest(ex.Message);
+                }
+            }
         }
 
 

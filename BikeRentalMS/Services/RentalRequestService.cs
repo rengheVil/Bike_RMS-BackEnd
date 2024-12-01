@@ -13,11 +13,13 @@ namespace BikeRentalMS.Services
 
         private readonly RentalRequestRepository _requestRepository;
         private readonly RentalRepository _rentalRepository;
+        private readonly MotorbikeRepository _motorbikeRepository;
 
-        public RentalRequestService(RentalRequestRepository rentalRequestRepository, RentalRepository rentalRepository)
+        public RentalRequestService(RentalRequestRepository rentalRequestRepository, RentalRepository rentalRepository, MotorbikeRepository motorbikeRepository)
         {
             _requestRepository = rentalRequestRepository;
             _rentalRepository = rentalRepository;
+            _motorbikeRepository = motorbikeRepository; 
         }
 
         public async Task<RentalRequest> AddRentalRequestAsync(RentalRequestDTO rentalRequest)
@@ -39,6 +41,11 @@ namespace BikeRentalMS.Services
             if (rentalRequest == null || rentalRequest.Status != "pending") return false;
 
            var result = await _requestRepository.ApproveRentalRequestAsync(requestId, DateTime.UtcNow);
+            var getRequest = await _requestRepository.GetRentalRequestByIdAsync(requestId);
+            var bike = getRequest.Motorbike;
+            bike.IsAvailable = false;
+           var updated = await _motorbikeRepository.UpdateMotorbikeAsync(bike);
+
             //if (result)
             //{
             //    var rental = new Rental

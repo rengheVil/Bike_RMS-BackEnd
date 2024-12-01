@@ -11,5 +11,9 @@ namespace BikeRentalMS.Models
         public string Model { get; set; }
         public string Category { get; set; }
         public byte[]? ImageData { get; set; }
+
+        public bool? IsAvailable { get; set; } = true; // Default to available
+
     }
 }
+

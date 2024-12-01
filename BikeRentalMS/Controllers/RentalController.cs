@@ -54,6 +54,7 @@ namespace BikeRentalMS.Controllers
         [HttpDelete("{rentalId}")]
         public async Task<IActionResult> DeleteRental(int rentalId)
         {
+
             if (await _rentalService.DeleteRentalAsync(rentalId))
                 return Ok("Rental deleted successfully.");
             return NotFound("Rental not found.");

@@ -5,6 +5,7 @@ using System.Linq;
 using BikeRentalMS.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BikeRentalMS.Dtos.Response;
 
 
 namespace BikeRentalMS.Services
@@ -26,7 +27,7 @@ namespace BikeRentalMS.Services
             }
 
             // Get all order histories
-            public async Task<List<OrderHistory>> GetAllOrderHistoriesAsync()
+            public async Task<List<OrderHistoryResponseDTO>> GetAllOrderHistoriesAsync()
             {
                 return await _orderRepository.GetAllOrderHistoriesAsync();
             }

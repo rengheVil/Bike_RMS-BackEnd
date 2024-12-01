@@ -62,7 +62,7 @@ namespace BikeRentalMS.Repositories
         // Get rental request by ID
         public async Task<RentalRequest> GetRentalRequestByIdAsync(int id)
             {
-                return await _context.RentalRequests.FirstOrDefaultAsync(r => r.Id == id);
+                return await _context.RentalRequests.Include(r => r.Motorbike).FirstOrDefaultAsync(r => r.Id == id);
             }
 
        
