@@ -40,6 +40,27 @@ namespace BikeRentalMS.Repositories
                 .ToListAsync();
         }
 
+        /// Order History get UserId
+
+        public async Task<IEnumerable<OrderHistory>> GetOrderHistoryByUserIdAsync(int userId)
+        {
+            return await _context.OrderHistorys
+                .Include(o => o.Motorbike)
+                .Where(o => o.UserId == userId)
+                .ToListAsync();
+        }
+
+        //public async Task<OrderHistory> AddOrderHistoryAsync(OrderHistory orderHistory)
+        //{
+        //    var result = await _context.OrderHistorys.AddAsync(orderHistory);
+        //    return result.Entity;
+        //}
+
+        //public async Task SaveChangesAsync()
+        //{
+        //    await _context.SaveChangesAsync();
+        //}
+
     }
 }
 

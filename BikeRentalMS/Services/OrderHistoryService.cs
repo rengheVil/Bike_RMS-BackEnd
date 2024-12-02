@@ -31,6 +31,23 @@ namespace BikeRentalMS.Services
             {
                 return await _orderRepository.GetAllOrderHistoriesAsync();
             }
+
+        /// get Customer Order History
+        /// 
+        public async Task<IEnumerable<OrderHistory>> GetOrderHistoryByUserIdAsync(int userId)
+        {
+            return await _orderRepository.GetOrderHistoryByUserIdAsync(userId);
         }
+
+        //public async Task<OrderHistory> CreateOrderHistoryAsync(OrderHistory orderHistory)
+        //{
+        //    var newOrderHistory = await _orderRepository.AddOrderHistoryAsync(orderHistory);
+        //    await _orderRepository.SaveChangesAsync();
+        //    return newOrderHistory;
+        //}
+
+
+
+    }
     }
 

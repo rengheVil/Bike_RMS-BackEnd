@@ -33,7 +33,34 @@ namespace BikeRentalMS.Controllers
             {
                 return Ok(await _orderService.GetAllOrderHistoriesAsync());
             }
-        }
+
+            // get  orderhistory/user/{userId}
+            [HttpGet("user/{userId}")]
+            public async Task<IActionResult> GetOrderHistoryByUserId(int userId)
+            {
+                var orderHistories = await _orderService.GetOrderHistoryByUserIdAsync(userId);
+
+                if (orderHistories == null || !orderHistories.Any())
+                {
+                    return NotFound($"No order history found for user ID {userId}.");
+                }
+
+                return Ok(orderHistories.Select(o => new
+                {
+                    o.Id,
+                    Motorbike = new
+                    {
+                        o.Motorbike.RegNumber,
+                        o.Motorbike.Brand,
+                        o.Motorbike.Model,
+                        o.Motorbike.Category
+                    },
+                    o.RentDate,
+                    o.ReturnDate
+                }));
+            } 
+
     }
+ }
 
 
