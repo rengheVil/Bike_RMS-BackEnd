@@ -21,8 +21,6 @@ namespace BikeRentalMS.Database
 
 
 
-
-
         }
 
 

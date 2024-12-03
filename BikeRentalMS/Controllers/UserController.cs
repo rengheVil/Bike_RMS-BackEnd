@@ -45,30 +45,30 @@ namespace BikeRentalMS.Controllers
                 }
             }
 
-            [HttpPost("register")]
-            public async Task<IActionResult> Register([FromBody] User user)
-            {
-                if (!ModelState.IsValid)
-                {
-                    return BadRequest("Invalid registration details.");
-                }
+            //[HttpPost("register")]
+            //public async Task<IActionResult> Register([FromBody] User user)
+            //{
+            //    if (!ModelState.IsValid)
+            //    {
+            //        return BadRequest("Invalid registration details.");
+            //    }
 
-                try
-                {
-                    bool isRegistered = await _userService.RegisterAsync(user);
-                    if (isRegistered)
-                    {
-                        return CreatedAtAction(nameof(GetUserById), new { userId = user.Id }, user);
-                    }
+            //    try
+            //    {
+            //        bool isRegistered = await _userService.RegisterAsync(user);
+            //        if (isRegistered)
+            //        {
+            //            return CreatedAtAction(nameof(GetUserById), new { userId = user.Id }, user);
+            //        }
 
-                    return Conflict("User registration failed. Username may already exist.");
-                }
-                catch (Exception ex)
-                {
-                    // Log exception here
-                    return StatusCode(500, $"Internal server error: {ex.Message}");
-                }
-            }
+            //        return Conflict("User registration failed. Username may already exist.");
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        // Log exception here
+            //        return StatusCode(500, $"Internal server error: {ex.Message}");
+            //    }
+            //}
 
             [HttpGet("{userId}")]
             public async Task<IActionResult> GetUserById(int userId)

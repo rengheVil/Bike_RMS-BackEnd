@@ -19,20 +19,11 @@ namespace BikeRentalMS.Services
             // Login a user
             public async Task<User> LoginAsync(string username, string password, string role)
             {
-                return await _userRepository.GetUserAsync(username, password, role);
+                return await _userRepository.GetUserByuserName(username);
             }
 
-            // Register a user
-            public async Task<bool> RegisterAsync(User user)
-            {
-                var existingUser = await _userRepository.GetUserAsync(user.UserName, user.Password, user.Role);
-                if (existingUser != null)
-                {
-                    // User with the same username already exists
-                    return false;
-                }
-                return await _userRepository.RegisterUserAsync(user);
-            }
+      
+          
 
             // Get user by ID
             public async Task<User> GetUserByIdAsync(int userId)
@@ -57,6 +48,8 @@ namespace BikeRentalMS.Services
             {
                 return await _userRepository.GetAllUsersAsync();
             }
+
+
         }
     }
 

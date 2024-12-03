@@ -6,7 +6,7 @@
         public int UserId { get; set; }
         public MotorbikeDto Motorbike { get; set; }
         public DateTime RentDate { get; set; }
-        public bool Status { get; set; } // True = Active, False = Overdue
+        public bool Status { get; set; }           // True = Active, False = Overdue
 
 
     }

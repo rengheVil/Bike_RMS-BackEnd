@@ -3,7 +3,9 @@ using BikeRentalMS.Database;
 using BikeRentalMS.Repositories;
 using BikeRentalMS.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using System;
+using System.Text;
 
 namespace BikeRentalMS
 {
@@ -21,7 +23,22 @@ namespace BikeRentalMS
             builder.Services.AddSwaggerGen();
 
 
-          
+            // Add JWT Authentication
+            var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]));
+
+            builder.Services.AddAuthentication()
+                .AddJwtBearer(options => options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    IssuerSigningKey = key,
+                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                    ValidAudience = builder.Configuration["Jwt:Audience"],
+                });
+
+            
+         
+
+            // Add Authorization
+            builder.Services.AddAuthorization();
 
             // Enable CORS
             builder.Services.AddCors(options =>

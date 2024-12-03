@@ -1,22 +1,114 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\UT01205\\Desktop\\BRMSg\\Bike_RMS-BackEnd\\",
+  "WorkspaceRootPath": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsg\\bike_rms-backend\\bikerentalms\\controllers\\orderhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\controllers\\orderhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsg\\bike_rms-backend\\bikerentalms\\services\\orderhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\services\\orderhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsg\\bike_rms-backend\\bikerentalms\\repositories\\orderhistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\dtos\\request\\logindata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\dtos\\request\\logindata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\dtos\\request\\useraccountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\dtos\\request\\useraccountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\dtos\\request\\tokenmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\dtos\\request\\tokenmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\repositories\\orderhistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\repositories\\orderhistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsg\\bike_rms-backend\\bikerentalms\\dtos\\response\\orderhistoryresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\models\\updatestatusrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\models\\updatestatusrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\models\\rentalrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\models\\rentalrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\models\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\models\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\models\\orderhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\models\\orderhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\models\\motorbike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\models\\motorbike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\dtos\\response\\orderhistoryresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\dtos\\response\\orderhistoryresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\dtos\\request\\motorbikedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\dtos\\request\\motorbikedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\dtos\\request\\motorbikerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\dtos\\request\\motorbikerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\dtos\\request\\rentaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\dtos\\request\\rentaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\dtos\\request\\rentalrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\dtos\\request\\rentalrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\controllers\\orderhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\controllers\\orderhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\services\\orderhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\services\\orderhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\migrations\\20241203101940_useraccountsdropped.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\migrations\\20241203101940_useraccountsdropped.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|c:\\users\\ut01205\\desktop\\brmsa\\bike_rms-backend\\bikerentalms\\migrations\\20241203090129_auth token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{416A38B8-E101-4A5C-ACAD-8817EB51A3AD}|BikeRentalMS\\BikeRentalMS.csproj|solutionrelative:bikerentalms\\migrations\\20241203090129_auth token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,36 +126,253 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrderHistoryController.cs",
-              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSg\\Bike_RMS-BackEnd\\BikeRentalMS\\Controllers\\OrderHistoryController.cs",
-              "RelativeDocumentMoniker": "BikeRentalMS\\Controllers\\OrderHistoryController.cs",
-              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSg\\Bike_RMS-BackEnd\\BikeRentalMS\\Controllers\\OrderHistoryController.cs",
-              "RelativeToolTip": "BikeRentalMS\\Controllers\\OrderHistoryController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwEIAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Controllers\\UserController.cs",
+              "RelativeToolTip": "BikeRentalMS\\Controllers\\UserController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwDMAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T04:37:04.138Z",
+              "WhenOpened": "2024-12-03T09:33:19.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserAccountModel.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Request\\UserAccountModel.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Dtos\\Request\\UserAccountModel.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Request\\UserAccountModel.cs",
+              "RelativeToolTip": "BikeRentalMS\\Dtos\\Request\\UserAccountModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T10:14:21.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserAccountController.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Controllers\\UserAccountController.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Controllers\\UserAccountController.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Controllers\\UserAccountController.cs",
+              "RelativeToolTip": "BikeRentalMS\\Controllers\\UserAccountController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAQwEMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T10:11:00.697Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderHistoryService.cs",
-              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSg\\Bike_RMS-BackEnd\\BikeRentalMS\\Services\\OrderHistoryService.cs",
-              "RelativeDocumentMoniker": "BikeRentalMS\\Services\\OrderHistoryService.cs",
-              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSg\\Bike_RMS-BackEnd\\BikeRentalMS\\Services\\OrderHistoryService.cs",
-              "RelativeToolTip": "BikeRentalMS\\Services\\OrderHistoryService.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAIwCIAAAAmAAAA",
+              "DocumentIndex": 26,
+              "Title": "20241203090129_Auth token.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Migrations\\20241203090129_Auth token.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Migrations\\20241203090129_Auth token.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Migrations\\20241203090129_Auth token.cs",
+              "RelativeToolTip": "BikeRentalMS\\Migrations\\20241203090129_Auth token.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T12:28:12.225Z"
+              "WhenOpened": "2024-12-03T09:01:29.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Models\\User.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Models\\User.cs",
+              "RelativeToolTip": "BikeRentalMS\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T09:58:53.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Program.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Program.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Program.cs",
+              "RelativeToolTip": "BikeRentalMS\\Program.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAewFgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T09:23:11.456Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "LogInData.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Request\\LogInData.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Dtos\\Request\\LogInData.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Request\\LogInData.cs",
+              "RelativeToolTip": "BikeRentalMS\\Dtos\\Request\\LogInData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:20:51.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\appsettings.json",
+              "RelativeDocumentMoniker": "BikeRentalMS\\appsettings.json",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\appsettings.json",
+              "RelativeToolTip": "BikeRentalMS\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-02T09:32:02.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "20241203101940_UserAccountsdropped.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Migrations\\20241203101940_UserAccountsdropped.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Migrations\\20241203101940_UserAccountsdropped.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Migrations\\20241203101940_UserAccountsdropped.cs",
+              "RelativeToolTip": "BikeRentalMS\\Migrations\\20241203101940_UserAccountsdropped.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T10:19:40.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TokenModel.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Request\\TokenModel.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Dtos\\Request\\TokenModel.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Request\\TokenModel.cs",
+              "RelativeToolTip": "BikeRentalMS\\Dtos\\Request\\TokenModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:09:18.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Database\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Database\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Database\\AppDbContext.cs",
+              "RelativeToolTip": "BikeRentalMS\\Database\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:13:39.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Services\\UserService.cs",
+              "RelativeToolTip": "BikeRentalMS\\Services\\UserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBUAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T09:50:02.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "BikeRentalMS\\Repositories\\UserRepository.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwDMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T09:51:40.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UpdateStatusRequest.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Models\\UpdateStatusRequest.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Models\\UpdateStatusRequest.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Models\\UpdateStatusRequest.cs",
+              "RelativeToolTip": "BikeRentalMS\\Models\\UpdateStatusRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:39:10.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RentalRequest.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Models\\RentalRequest.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Models\\RentalRequest.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Models\\RentalRequest.cs",
+              "RelativeToolTip": "BikeRentalMS\\Models\\RentalRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:39:14.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Rental.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Models\\Rental.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Models\\Rental.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Models\\Rental.cs",
+              "RelativeToolTip": "BikeRentalMS\\Models\\Rental.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:38:59.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "OrderHistory.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Models\\OrderHistory.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Models\\OrderHistory.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Models\\OrderHistory.cs",
+              "RelativeToolTip": "BikeRentalMS\\Models\\OrderHistory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:38:56.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Motorbike.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Models\\Motorbike.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Models\\Motorbike.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Models\\Motorbike.cs",
+              "RelativeToolTip": "BikeRentalMS\\Models\\Motorbike.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:38:54.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Models\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Models\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Models\\LoginRequest.cs",
+              "RelativeToolTip": "BikeRentalMS\\Models\\LoginRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:37:08.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrderHistoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Repositories\\OrderHistoryRepository.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Repositories\\OrderHistoryRepository.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Repositories\\OrderHistoryRepository.cs",
+              "RelativeToolTip": "BikeRentalMS\\Repositories\\OrderHistoryRepository.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAwwD0AAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T12:23:00.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "OrderHistoryResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSg\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Response\\OrderHistoryResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Response\\OrderHistoryResponseDTO.cs",
               "RelativeDocumentMoniker": "BikeRentalMS\\Dtos\\Response\\OrderHistoryResponseDTO.cs",
-              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSg\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Response\\OrderHistoryResponseDTO.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Response\\OrderHistoryResponseDTO.cs",
               "RelativeToolTip": "BikeRentalMS\\Dtos\\Response\\OrderHistoryResponseDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -71,15 +380,75 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderHistoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSg\\Bike_RMS-BackEnd\\BikeRentalMS\\Repositories\\OrderHistoryRepository.cs",
-              "RelativeDocumentMoniker": "BikeRentalMS\\Repositories\\OrderHistoryRepository.cs",
-              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSg\\Bike_RMS-BackEnd\\BikeRentalMS\\Repositories\\OrderHistoryRepository.cs",
-              "RelativeToolTip": "BikeRentalMS\\Repositories\\OrderHistoryRepository.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAowD0AAAALAAAA",
+              "DocumentIndex": 19,
+              "Title": "MotorbikeDto.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Request\\MotorbikeDto.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Dtos\\Request\\MotorbikeDto.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Request\\MotorbikeDto.cs",
+              "RelativeToolTip": "BikeRentalMS\\Dtos\\Request\\MotorbikeDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T12:23:00.629Z"
+              "WhenOpened": "2024-12-02T11:39:45.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MotorbikeRequest.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Request\\MotorbikeRequest.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Dtos\\Request\\MotorbikeRequest.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Request\\MotorbikeRequest.cs",
+              "RelativeToolTip": "BikeRentalMS\\Dtos\\Request\\MotorbikeRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:39:47.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RentalDto.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Request\\RentalDto.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Dtos\\Request\\RentalDto.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Request\\RentalDto.cs",
+              "RelativeToolTip": "BikeRentalMS\\Dtos\\Request\\RentalDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:39:50.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "RentalRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Request\\RentalRequestDTO.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Dtos\\Request\\RentalRequestDTO.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Dtos\\Request\\RentalRequestDTO.cs",
+              "RelativeToolTip": "BikeRentalMS\\Dtos\\Request\\RentalRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:39:49.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "OrderHistoryService.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Services\\OrderHistoryService.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Services\\OrderHistoryService.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Services\\OrderHistoryService.cs",
+              "RelativeToolTip": "BikeRentalMS\\Services\\OrderHistoryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T12:28:12.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "OrderHistoryController.cs",
+              "DocumentMoniker": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Controllers\\OrderHistoryController.cs",
+              "RelativeDocumentMoniker": "BikeRentalMS\\Controllers\\OrderHistoryController.cs",
+              "ToolTip": "C:\\Users\\UT01205\\Desktop\\BRMSa\\Bike_RMS-BackEnd\\BikeRentalMS\\Controllers\\OrderHistoryController.cs",
+              "RelativeToolTip": "BikeRentalMS\\Controllers\\OrderHistoryController.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAwwEIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T04:37:04.138Z"
             }
           ]
         }

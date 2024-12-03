@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BikeRentalMS.Database;
+using static BikeRentalMS.Repositories.UserRepository;
 
 namespace BikeRentalMS.Repositories
 {
@@ -19,10 +20,9 @@ namespace BikeRentalMS.Repositories
             }
 
             // Get user by username, password, and role
-            public async Task<User> GetUserAsync(string username, string password, string role)
+            public async Task<User> GetUserByuserName(string userName)
             {
-                return await _context.Users
-                    .FirstOrDefaultAsync(u => u.UserName == username && u.Password == password && u.Role == role);
+                return await _context.Users.FirstOrDefaultAsync(u=>u.UserName== userName);
             }
 
             // Register a new user
@@ -46,7 +46,7 @@ namespace BikeRentalMS.Repositories
                 if (existingUser == null) return false;
 
                 existingUser.UserName = user.UserName;
-                existingUser.Password = user.Password;
+                existingUser.PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.PasswordHash);
                 existingUser.NIC = user.NIC;
                 existingUser.Role = user.Role;
 
@@ -69,7 +69,15 @@ namespace BikeRentalMS.Repositories
             public async Task<List<User>> GetAllUsersAsync()
             {
                 return await _context.Users.ToListAsync();
-            }
         }
+
+
+
+
+
+    
+        
+
     }
+}
 
