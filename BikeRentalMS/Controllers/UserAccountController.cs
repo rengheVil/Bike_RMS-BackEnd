@@ -42,6 +42,8 @@ namespace BikeRentalMS.Controllers
                         NIC = userAccount.NIC,
                         PasswordHash = BCrypt.Net.BCrypt.HashPassword(userAccount.Password),
                         Role = (string)userAccount.Role,
+                        Email = userAccount.Email,
+                        PhoneNumber = userAccount.PhoneNumber,
                     };
 
                     var data = await _appDbContext.Users.AddAsync(user);
@@ -88,6 +90,8 @@ namespace BikeRentalMS.Controllers
                 claimList.Add(new Claim("Id", user.Id.ToString()));
                 claimList.Add(new Claim("UserName", user.UserName));
                 claimList.Add(new Claim("NIC", user.NIC));
+                claimList.Add(new Claim("Email", user.Email));
+                claimList.Add(new Claim("PhoneNumber", user.PhoneNumber));
                 claimList.Add(new Claim("Role", user.Role.ToString()));
                 claimList.Add(new Claim(ClaimTypes.Role, user.Role.ToString()));
 

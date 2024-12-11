@@ -1,8 +1,10 @@
 
 using BikeRentalMS.Database;
+using BikeRentalMS.Models;
 using BikeRentalMS.Repositories;
 using BikeRentalMS.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Text;
@@ -21,6 +23,14 @@ namespace BikeRentalMS
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            // Register EmailConfig
+            builder.Services.Configure<EmailConfig>(builder.Configuration.GetSection("EmailConfig"));
+
+            // Register services
+            builder.Services.AddScoped<sendmailService>();
+            builder.Services.AddScoped<SendMailRepository>();
+            builder.Services.AddScoped<EmailServiceProvider>();
 
 
             // Add JWT Authentication
@@ -54,6 +64,9 @@ namespace BikeRentalMS
 
             // Get connection string
             builder.Services.AddDbContext<AppDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("DefoultConnection")));
+
+            // Ensure EmailConfig is available as a singleton if needed
+            builder.Services.AddSingleton(sp => sp.GetRequiredService<IOptions<EmailConfig>>().Value);
 
             //  Repositories
             builder.Services.AddScoped<UserRepository>();

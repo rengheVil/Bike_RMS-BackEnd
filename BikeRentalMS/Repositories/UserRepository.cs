@@ -49,6 +49,8 @@ namespace BikeRentalMS.Repositories
                 existingUser.PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.PasswordHash);
                 existingUser.NIC = user.NIC;
                 existingUser.Role = user.Role;
+                existingUser.Email = user.Email;
+                existingUser.PhoneNumber = user.PhoneNumber;
 
                 int result = await _context.SaveChangesAsync();
                 return result > 0;
