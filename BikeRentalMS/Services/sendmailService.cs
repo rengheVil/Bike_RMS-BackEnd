@@ -12,7 +12,7 @@ namespace BikeRentalMS.Services
             var template = await _sendMailRepository.GetTemplate(sendMailRequest.EmailType).ConfigureAwait(false);
             if (template == null) throw new Exception("Template not found");
 
-            var bodyGenerated = await EmailBodyGenerate(template.Body, sendMailRequest.Name, sendMailRequest.Otp);
+            var bodyGenerated = await EmailBodyGenerate(template.Body, sendMailRequest.Name);
 
             MailModel mailModel = new MailModel
             {
@@ -27,12 +27,12 @@ namespace BikeRentalMS.Services
             return "email was sent successfully";
         }
 
-        public async Task<string> EmailBodyGenerate(string emailbody, string? name = null, string? otp = null)
+        public async Task<string> EmailBodyGenerate(string emailbody, string? name = null, string? Accept = null)
         {
             var replacements = new Dictionary<string, string?>
             {
                 { "{Name}", name },
-                { "{Otp}", otp }
+                { "{Accept}", Accept }
             };
 
             foreach (var replacement in replacements)

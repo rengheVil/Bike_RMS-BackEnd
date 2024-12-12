@@ -34,7 +34,7 @@ namespace BikeRentalMS.Repositories
             // Retrieve all rental requests
             public async Task<List<RentalRequest>> GetAllRentalRequestsAsync()
             {
-                return await _context.RentalRequests.Include(b => b.Motorbike).ToListAsync();
+                return await _context.RentalRequests.Include(b=>b.User).Include(b => b.Motorbike).ToListAsync();
             }
 
             // Approve a rental request

@@ -70,6 +70,12 @@ namespace BikeRentalMS.Repositories
             _context.SaveChangesAsync();
         }
 
+        // get all count Bike
+        public async Task<int> GetBikeCountAsync()
+        {
+            return await _context.Motorbikes.CountAsync();
+        }
+
 
 
     }

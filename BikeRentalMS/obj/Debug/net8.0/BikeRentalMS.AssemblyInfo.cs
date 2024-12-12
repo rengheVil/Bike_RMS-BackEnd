@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BikeRentalMS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95f7f613b15af75f49c9f01151eff96c0943341a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d9d097fbd5dc020bd9240b225e6a5cd59a14a6b")]
 [assembly: System.Reflection.AssemblyProductAttribute("BikeRentalMS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BikeRentalMS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

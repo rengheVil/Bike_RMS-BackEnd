@@ -29,7 +29,7 @@ namespace BikeRentalMS.Services
                 Status = "pending",
                 MotorbikeId = rentalRequest.MotorbikeId,
                 UserId = rentalRequest.UserId,
-                RequestDate = DateTime.UtcNow
+                RequestDate = DateTime.Now
             };
             var data = await _requestRepository.AddRentalRequestAsync(rental);
             return data;
@@ -40,7 +40,7 @@ namespace BikeRentalMS.Services
             var rentalRequest = await _requestRepository.GetRentalRequestByIdAsync(requestId);
             if (rentalRequest == null || rentalRequest.Status != "pending") return false;
 
-           var result = await _requestRepository.ApproveRentalRequestAsync(requestId, DateTime.UtcNow);
+           var result = await _requestRepository.ApproveRentalRequestAsync(requestId, DateTime.Now);
             var getRequest = await _requestRepository.GetRentalRequestByIdAsync(requestId);
             var bike = getRequest.Motorbike;
             bike.IsAvailable = false;
@@ -59,7 +59,7 @@ namespace BikeRentalMS.Services
             {
                 MotorbikeId = rentalRequest.MotorbikeId,
                 UserId = rentalRequest.UserId,
-                RentDate = DateTime.UtcNow
+                RentDate = DateTime.Now
             };
             var data = await _rentalRepository.AddRentalAsync(rental);
             return data;

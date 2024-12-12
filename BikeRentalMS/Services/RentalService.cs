@@ -132,7 +132,7 @@ namespace BikeRentalMS.Services
                     Model = r.Motorbike.Model
                 },
                 RentDate = r.RentDate,
-                Status = r.ReturnDate >= DateTime.UtcNow
+                Status = r.ReturnDate >= DateTime.Now
 
             });
         }

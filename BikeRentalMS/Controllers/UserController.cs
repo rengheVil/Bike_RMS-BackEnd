@@ -149,7 +149,15 @@ namespace BikeRentalMS.Controllers
                     return StatusCode(500, $"Internal server error: {ex.Message}");
                 }
             }
-        }
+
+            [HttpGet("count")]
+            public async Task<IActionResult> GetUserCount()
+            {
+                var count = await _userService.GetUserCountAsync();
+                return Ok(count);
+            }
+
+    }
     }
 
 

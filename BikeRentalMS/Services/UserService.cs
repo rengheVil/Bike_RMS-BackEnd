@@ -49,8 +49,14 @@ namespace BikeRentalMS.Services
                 return await _userRepository.GetAllUsersAsync();
             }
 
-
+        // get count of users
+        public async Task<int> GetUserCountAsync()
+        {
+            return await _userRepository.GetUserCountAsync();
         }
+
+
+    }
     }
 
 

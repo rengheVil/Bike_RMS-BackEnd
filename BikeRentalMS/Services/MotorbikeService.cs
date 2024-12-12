@@ -1,6 +1,7 @@
 ﻿using BikeRentalMS.Dtos.Request;
 using BikeRentalMS.Models;
 using BikeRentalMS.Repositories;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
@@ -62,7 +63,17 @@ namespace BikeRentalMS.Services
             {
                 return await _motorbikeRepository.GetAllMotorbikesAsync();
             }
+
+        //get  all count Bike
+        public async Task<int> GetBikeCountAsync()
+        {
+            return await _motorbikeRepository.GetBikeCountAsync();
         }
+
+   
+
+
+    }
     }
 
 

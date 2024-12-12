@@ -3,6 +3,7 @@ using BikeRentalMS.Models;
 using BikeRentalMS.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BikeRentalMS.Controllers
 {
@@ -64,7 +65,18 @@ namespace BikeRentalMS.Controllers
             {
                 return Ok(await _motorbikeService.GetAllMotorbikesAsync());
             }
+
+        [HttpGet("countbike")]
+        public async Task<IActionResult> GetBikeCountAsync()
+        {
+            var count = await _motorbikeService.GetBikeCountAsync();
+            return Ok(count);
         }
+
+        
+
+
+    }
     }
 
 
