@@ -4,6 +4,7 @@ using BikeRentalMS.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using static BikeRentalMS.Repositories.RentalRequestRepository;
 
 
 namespace BikeRentalMS.Services
@@ -19,7 +20,7 @@ namespace BikeRentalMS.Services
         {
             _requestRepository = rentalRequestRepository;
             _rentalRepository = rentalRepository;
-            _motorbikeRepository = motorbikeRepository; 
+            _motorbikeRepository = motorbikeRepository;
         }
 
         public async Task<RentalRequest> AddRentalRequestAsync(RentalRequestDTO rentalRequest)
@@ -40,20 +41,12 @@ namespace BikeRentalMS.Services
             var rentalRequest = await _requestRepository.GetRentalRequestByIdAsync(requestId);
             if (rentalRequest == null || rentalRequest.Status != "pending") return false;
 
-           var result = await _requestRepository.ApproveRentalRequestAsync(requestId, DateTime.Now);
+            var result = await _requestRepository.ApproveRentalRequestAsync(requestId);
             var getRequest = await _requestRepository.GetRentalRequestByIdAsync(requestId);
             var bike = getRequest.Motorbike;
             bike.IsAvailable = false;
-           var updated = await _motorbikeRepository.UpdateMotorbikeAsync(bike);
+            var updated = await _motorbikeRepository.UpdateMotorbikeAsync(bike);
 
-            //if (result)
-            //{
-            //    var rental = new Rental
-            //    {
-
-            //    };
-            //    await _rentalRepository.AddRentalAsync()
-            //}
 
             var rental = new Rental
             {
@@ -69,25 +62,19 @@ namespace BikeRentalMS.Services
         public async Task<List<RentalRequest>> GetUserApprovalsAsync(int userId)
         {
             var data = await _requestRepository.GetApprovedRequestsByUserIdAsync(userId);
-           // var Motorbike = data[0].Motorbike;
+            // var Motorbike = data[0].Motorbike;
             return data;
         }
 
 
-        public async Task<bool> UpdateRentalRequestStatusAsync(int requestId)
+        public async Task<bool> RejectRentalRequest(int requestId)
         {
-            var getRequest = await _requestRepository.GetRentalRequestByIdAsync(requestId);
-            if(getRequest == null)
-            {
-                throw new Exception("Request not found");
-            }
-            getRequest.Status = "approved";
-            return await _requestRepository.UpdateRentalRequestStatusAsync(getRequest);
+            return await _requestRepository.RejectRentalRequest(requestId);
         }
 
-        public async Task<List<RentalRequest>> GetAllRentalRequestsAsync()
+        public async Task<List<RentalRequest>> GetAllRentalRequestsAsync(string? status)
         {
-            return await _requestRepository.GetAllRentalRequestsAsync();
+            return await _requestRepository.GetAllRentalRequestsAsync(status);
         }
 
         public async Task<RentalRequest> GetRentalRequestByIdAsync(int id)
