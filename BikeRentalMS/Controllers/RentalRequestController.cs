@@ -15,47 +15,47 @@ namespace BikeRentalMS.Controllers
     public class RentalRequestController : ControllerBase
     {
 
-            private readonly RentalRequestService _requestService;
+        private readonly RentalRequestService _requestService;
 
-            public RentalRequestController(RentalRequestService requestService)
+        public RentalRequestController(RentalRequestService requestService)
+        {
+            _requestService = requestService;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddRentalRequest([FromBody] RentalRequestDTO requestDto)
+        {
+            var data = await _requestService.AddRentalRequestAsync(requestDto);
+            // return CreatedAtAction(nameof(GetRentalRequestById), new { id = requestDto.Id }, requestDto);
+            return Ok(data);
+
+        }
+
+        [HttpGet("{requestId}/approval")]
+        public async Task<IActionResult> ApproveRentalRequestAsync(int requestId)
+        {
+            if (!ModelState.IsValid)
             {
-                _requestService = requestService;
+                return BadRequest("Invalid status update request.");
             }
 
-            [HttpPost]
-            public async Task<IActionResult> AddRentalRequest([FromBody] RentalRequestDTO requestDto)
+            try
             {
-                   var data = await _requestService.AddRentalRequestAsync(requestDto);
-                    // return CreatedAtAction(nameof(GetRentalRequestById), new { id = requestDto.Id }, requestDto);
-                    return Ok(data);
-              
-            }
+                bool isUpdated = await _requestService.ApproveRentalRequestAsync(requestId);
 
-            [HttpGet("{requestId}/update")]
-            public async Task<IActionResult> UpdateRentalRequestStatus(int requestId)
+                if (isUpdated)
+                {
+                    return NoContent();
+                }
+
+                return NotFound("Rental request not found or status update failed.");
+            }
+            catch (Exception ex)
             {
-                if (!ModelState.IsValid)
-                {
-                    return BadRequest("Invalid status update request.");
-                }
-
-                try
-                {
-                    bool isUpdated = await _requestService.ApproveRentalRequestAsync(requestId);
-
-                    if (isUpdated)
-                    {
-                        return NoContent(); 
-                    }
-
-                    return NotFound("Rental request not found or status update failed.");
-                }
-                catch (Exception ex)
-                {
-                    // Log the exception
-                    return StatusCode(500, $"Internal server error: {ex.Message}");
-                }
+                // Log the exception
+                return StatusCode(500, $"Internal server error: {ex.Message}");
             }
+        }
 
         ///      ----------approve user============================
 
@@ -82,40 +82,55 @@ namespace BikeRentalMS.Controllers
 
 
         [HttpGet("{requestId}")]
-            public async Task<IActionResult> GetRentalRequestById(int requestId)
+        public async Task<IActionResult> GetRentalRequestById(int requestId)
+        {
+            try
             {
-                try
+                var request = await _requestService.GetRentalRequestByIdAsync(requestId);
+                if (request == null)
                 {
-                    var request = await _requestService.GetRentalRequestByIdAsync(requestId);
-                    if (request == null)
-                    {
-                        return NotFound("Rental request not found.");
-                    }
+                    return NotFound("Rental request not found.");
+                }
 
-                    return Ok(request);
-                }
-                catch (Exception ex)
-                {
-                    // Log the exception
-                    return StatusCode(500, $"Internal server error: {ex.Message}");
-                }
+                return Ok(request);
             }
-
-            [HttpGet]
-            public async Task<IActionResult> GetAllRentalRequests()
+            catch (Exception ex)
             {
-                try
-                {
-                    var requests = await _requestService.GetAllRentalRequestsAsync();
-                    return Ok(requests);
-                }
-                catch (Exception ex)
-                {
-                    // Log the exception
-                    return StatusCode(500, $"Internal server error: {ex.Message}");
-                }
+                // Log the exception
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllRentalRequestsAsync(string? status)
+        {
+            try
+            {
+                var requests = await _requestService.GetAllRentalRequestsAsync(status);
+                return Ok(requests);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpDelete("{requestId}/reject")]
+
+        public async Task<IActionResult> RejectRentalRequest(int requestId)
+        {
+            try
+            {
+                var response = await _requestService.RejectRentalRequest(requestId);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
     }
+}
 
 
